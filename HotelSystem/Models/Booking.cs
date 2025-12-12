@@ -12,6 +12,6 @@ namespace HotelSystem.Models
         public DateTime CheckIn { get; set; }
         public DateTime CheckOut { get; set; }
 
-        public string Status { get; set; }  // Confirmed, Cancelled, Completed
+        public required string Status { get; set; }  // Confirmed, Cancelled, Completed
     }
 }

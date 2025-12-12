@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="receipt.title">Booking Receipt - Grand Luxe</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="glass-card p-5 shadow-lg">
+                    <div class="text-center mb-4">
+                        <h1 class="display-4 fw-bold" data-i18n="receipt.header">Grand Luxe Hotel</h1>
+                        <p class="text-muted" data-i18n="receipt.subtitle">Booking Receipt</p>
+                    </div>
+
+                    <div id="receiptContent">
+                        <div class="text-center">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary" onclick="window.print()" data-i18n="receipt.print">Print Receipt</button>
+                        <a id="backButton" href="index.html" class="btn btn-secondary" data-i18n="receipt.home">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Load receipt on page load
+        $(document).ready(function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const bookingId = urlParams.get('id');
+            const source = urlParams.get('source') || 'index'; // Default to index if no source
+            
+            // Set the back button based on source
+            if (source === 'admin') {
+                $('#backButton').attr('href', 'admin.html');
+                // Set text directly, translations will be applied if available
+                $('#backButton').text('Back to Admin');
+                if (typeof getTranslation === 'function') {
+                    $('#backButton').text(getTranslation('receipt.admin'));
+                }
+            } else {
+                $('#backButton').attr('href', 'index.html');
+                $('#backButton').text('Back to Home');
+                if (typeof getTranslation === 'function') {
+                    $('#backButton').text(getTranslation('receipt.home'));
+                }
+            }
+            
+            if (bookingId) {
+                loadReceipt(bookingId);
+            } else {
+                $('#receiptContent').html('<div class="alert alert-danger">Booking ID not provided</div>');
+            }
+        });
+    </script>
+</body>
+</html>

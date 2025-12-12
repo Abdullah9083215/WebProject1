@@ -3,65 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Grand Luxe</title>
+    <title data-i18n="admin.title">Admin Dashboard - Grand Luxe</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="admin-body">
 
-<div class="container py-5">
-
-    <h1 class="text-center mb-4">🏨 Admin Dashboard</h1>
-
-    <!-- ROOMS MANAGEMENT -->
-    <div class="glass-card p-4 mb-4">
-        <h3>Manage Rooms</h3>
-
-        <form id="addRoomForm" class="row g-3">
-            <div class="col-md-4">
-                <input id="roomName" placeholder="Room Name" class="form-control modern-input" required>
-            </div>
-
-            <div class="col-md-4">
-                <input id="roomPrice" placeholder="Price" class="form-control modern-input" required>
-            </div>
-
-            <div class="col-md-4">
-                <button class="btn btn-success w-100">Add Room</button>
-            </div>
-        </form>
-
-        <table class="table table-striped mt-4 text-center">
-            <thead>
-                <tr>
-                    <th>Room</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody id="adminRoomsTable"></tbody>
-        </table>
+<nav class="navbar navbar-expand-lg glass-nav">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3 text-white" href="index.html" data-i18n="admin.nav.brand">🏨 Admin Dashboard</a>
+        <div class="d-flex gap-2">
+            <select id="languageSelect" class="form-select form-select-sm" style="width: auto;">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+            </select>
+            <button class="btn btn-outline-light" id="darkToggle">🌙</button>
+        </div>
     </div>
+</nav>
 
-    <!-- BOOKINGS MANAGEMENT -->
-    <div class="glass-card p-4">
-        <h3>Customer Bookings</h3>
+<div class="container py-5 mt-4">
+    
+    <!-- TABS NAVIGATION -->
+    <ul class="nav nav-tabs mb-4" id="adminTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="rooms-tab" data-bs-toggle="tab" data-bs-target="#rooms" type="button" role="tab">
+                <i class="fas fa-door-open"></i> <span data-i18n="admin.tabs.rooms">Rooms</span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="guests-tab" data-bs-toggle="tab" data-bs-target="#guests" type="button" role="tab">
+                <i class="fas fa-users"></i> <span data-i18n="admin.tabs.guests">Guests</span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#bookings" type="button" role="tab">
+                <i class="fas fa-calendar-check"></i> <span data-i18n="admin.tabs.bookings">Bookings</span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="reports-tab" data-bs-toggle="tab" data-bs-target="#reports" type="button" role="tab">
+                <i class="fas fa-chart-bar"></i> <span data-i18n="admin.tabs.reports">Reports</span>
+            </button>
+        </li>
+    </ul>
 
-        <table class="table table-striped mt-3 text-center">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Room</th>
-                    <th>Check-in</th>
-                    <th>Check-out</th>
-                </tr>
-            </thead>
-            <tbody id="adminBookingsTable"></tbody>
-        </table>
+    <div class="tab-content" id="adminTabContent">
+        
+        <!-- ROOMS TAB -->
+        <div class="tab-pane fade show active" id="rooms" role="tabpanel">
+            <div class="glass-card p-4 mb-4">
+                <h3 data-i18n="admin.rooms.title">Manage Rooms</h3>
+                
+                <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#roomModal" onclick="openRoomModal()">
+                    <i class="fas fa-plus"></i> <span data-i18n="admin.rooms.add">Add New Room</span>
+                </button>
+
+                <!-- Search -->
+                <div class="mb-3">
+                    <input type="text" id="roomSearchAdmin" class="form-control modern-input" 
+                           placeholder="Search rooms..." data-i18n-placeholder="admin.search">
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th data-i18n="admin.rooms.table.id">ID</th>
+                                <th data-i18n="admin.rooms.table.number">Room Number</th>
+                                <th data-i18n="admin.rooms.table.type">Type</th>
+                                <th data-i18n="admin.rooms.table.price">Price</th>
+                                <th data-i18n="admin.rooms.table.available">Available</th>
+                                <th data-i18n="admin.actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminRoomsTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- GUESTS TAB -->
+        <div class="tab-pane fade" id="guests" role="tabpanel">
+            <div class="glass-card p-4 mb-4">
+                <h3 data-i18n="admin.guests.title">Manage Guests</h3>
+                
+                <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#guestModal" onclick="openGuestModal()">
+                    <i class="fas fa-plus"></i> <span data-i18n="admin.guests.add">Add New Guest</span>
+                </button>
+
+                <!-- Search -->
+                <div class="mb-3">
+                    <input type="text" id="guestSearchAdmin" class="form-control modern-input" 
+                           placeholder="Search guests..." data-i18n-placeholder="admin.search">
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th data-i18n="admin.guests.table.id">ID</th>
+                                <th data-i18n="admin.guests.table.name">Name</th>
+                                <th data-i18n="admin.guests.table.contact">Contact</th>
+                                <th data-i18n="admin.actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminGuestsTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOOKINGS TAB -->
+        <div class="tab-pane fade" id="bookings" role="tabpanel">
+            <div class="glass-card p-4 mb-4">
+                <h3 data-i18n="admin.bookings.title">Manage Bookings</h3>
+                
+                <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="openBookingModal()">
+                    <i class="fas fa-plus"></i> <span data-i18n="admin.bookings.add">Add New Booking</span>
+                </button>
+
+                <!-- Search and Filter -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <input type="text" id="bookingSearchAdmin" class="form-control modern-input" 
+                               placeholder="Search bookings..." data-i18n-placeholder="admin.search">
+                    </div>
+                    <div class="col-md-3">
+                        <select id="bookingStatusFilter" class="form-select modern-input">
+                            <option value="" data-i18n="admin.bookings.filter.all">All Status</option>
+                            <option value="Confirmed" data-i18n="admin.bookings.filter.confirmed">Confirmed</option>
+                            <option value="Cancelled" data-i18n="admin.bookings.filter.cancelled">Cancelled</option>
+                            <option value="Completed" data-i18n="admin.bookings.filter.completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th data-i18n="admin.bookings.table.id">ID</th>
+                                <th data-i18n="admin.bookings.table.guest">Guest</th>
+                                <th data-i18n="admin.bookings.table.room">Room</th>
+                                <th data-i18n="admin.bookings.table.checkin">Check-in</th>
+                                <th data-i18n="admin.bookings.table.checkout">Check-out</th>
+                                <th data-i18n="admin.bookings.table.status">Status</th>
+                                <th data-i18n="admin.actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminBookingsTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- REPORTS TAB -->
+        <div class="tab-pane fade" id="reports" role="tabpanel">
+            <div class="glass-card p-4 mb-4">
+                <h3 data-i18n="admin.reports.title">Room Booking History</h3>
+                
+                <div class="mb-3">
+                    <label class="form-label" data-i18n="admin.reports.selectRoom">Select Room:</label>
+                    <select id="reportRoomSelect" class="form-select modern-input">
+                        <option value="" data-i18n="admin.reports.select">Select a room...</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary mb-3" onclick="loadRoomHistory()" data-i18n="admin.reports.load">Load History</button>
+                <button class="btn btn-danger mb-3" onclick="exportRoomHistoryPdf()" data-i18n="admin.reports.export">Export PDF</button>
+
+                <div id="roomHistoryContainer" class="mt-4"></div>
+            </div>
+        </div>
+
     </div>
-
 </div>
 
+<!-- ROOM MODAL -->
+<div class="modal fade" id="roomModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="roomModalTitle" data-i18n="admin.rooms.add">Add Room</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="roomForm">
+                    <input type="hidden" id="roomId">
+                    <div class="mb-3">
+                        <label class="form-label" data-i18n="admin.rooms.form.number">Room Number</label>
+                        <input type="text" id="roomNumber" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" data-i18n="admin.rooms.form.type">Type</label>
+                        <select id="roomType" class="form-select" required>
+                            <option value="Single" data-i18n="admin.rooms.form.typeSingle">Single</option>
+                            <option value="Double" data-i18n="admin.rooms.form.typeDouble">Double</option>
+                            <option value="Suite" data-i18n="admin.rooms.form.typeSuite">Suite</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" data-i18n="admin.rooms.form.price">Price per Night</label>
+                        <input type="number" step="0.01" id="roomPrice" class="form-control" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" id="roomAvailable" class="form-check-input" checked>
+                        <label class="form-check-label" for="roomAvailable" data-i18n="admin.rooms.form.available">Available</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="admin.cancel">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveRoom()" data-i18n="admin.save">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- GUEST MODAL -->
+<div class="modal fade" id="guestModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="guestModalTitle" data-i18n="admin.guests.add">Add Guest</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="guestForm">
+                    <input type="hidden" id="guestId">
+                    <div class="mb-3">
+                        <label class="form-label" data-i18n="admin.guests.form.name">Name</label>
+                        <input type="text" id="guestName" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" data-i18n="admin.guests.form.contact">Contact (Email or Phone)</label>
+                        <input type="text" id="guestContact" class="form-control" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="admin.cancel">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveGuest()" data-i18n="admin.save">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingModalTitle" data-i18n="admin.bookings.add">Add Booking</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingFormAdmin">
+                    <input type="hidden" id="bookingId">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label" data-i18n="admin.bookings.form.guest">Guest</label>
+                            <select id="bookingGuestId" class="form-select" required></select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label" data-i18n="admin.bookings.form.room">Room</label>
+                            <select id="bookingRoomId" class="form-select" required></select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label" data-i18n="admin.bookings.form.checkin">Check-in</label>
+                            <input type="date" id="bookingCheckIn" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label" data-i18n="admin.bookings.form.checkout">Check-out</label>
+                            <input type="date" id="bookingCheckOut" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label" data-i18n="admin.bookings.form.status">Status</label>
+                            <select id="bookingStatus" class="form-select" required>
+                                <option value="Confirmed" data-i18n="admin.bookings.status.confirmed">Confirmed</option>
+                                <option value="Cancelled" data-i18n="admin.bookings.status.cancelled">Cancelled</option>
+                                <option value="Completed" data-i18n="admin.bookings.status.completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="admin.cancel">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveBooking()" data-i18n="admin.save">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

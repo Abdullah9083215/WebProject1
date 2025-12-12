@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o6GMOodCYkxgCl/Xa6FjPey8DfAz7uaa5y6tukpEplM=",
+  "Hash": "rAvI0r5dxc92Q59MuinArScJG3pYjrigsK2VXy45NPE=",
   "Source": "HotelSystem",
   "BasePath": "_content/HotelSystem",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hbnnf4h46e",
-      "Integrity": "MxtdZaG/pWPjPT6SVRBrf6K6CnP5wD0h9j9gxm0ytpY=",
+      "Fingerprint": "jx16bfz38u",
+      "Integrity": "R8Y3E9HlfQxwUh3g3KYL0nn4fx3ssusvEYjRaiJQdoM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin.html"
@@ -1382,6 +1382,48 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\guest-login.html",
+      "SourceId": "HotelSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\",
+      "BasePath": "_content/HotelSystem",
+      "RelativePath": "guest-login#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bo0so5j9ik",
+      "Integrity": "lVG/uHbOjo3gUuhCQzbgvIvW/5AUolN10Os/Er42CLI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\guest-login.html"
+    },
+    {
+      "Identity": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\home.html",
+      "SourceId": "HotelSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\",
+      "BasePath": "_content/HotelSystem",
+      "RelativePath": "home#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fwkfwwq73z",
+      "Integrity": "jxeOedGEu6FbhrJCMEG9Yg5+gw27OrybBY1/jrT90VY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\home.html"
+    },
+    {
       "Identity": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\index.html",
       "SourceId": "HotelSystem",
       "SourceType": "Discovered",
@@ -1396,8 +1438,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ko0uomy6a4",
-      "Integrity": "9C4Ghjo4dGJUO5nb5tRZ6VQJKBMvx6ydXCNQMdvm3/k=",
+      "Fingerprint": "ay885mbc6e",
+      "Integrity": "rjOBdvXZqm3+4uHBb/g/cz913KHWk5Lv0/09inz9gBY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -2621,6 +2663,27 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\receipt.html",
+      "SourceId": "HotelSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\",
+      "BasePath": "_content/HotelSystem",
+      "RelativePath": "receipt#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3jyfdo2usg",
+      "Integrity": "cXYC8tAxuHufynAn4m4c1idlcvLbnglhpL6Bxu/aETA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\receipt.html"
+    },
+    {
       "Identity": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\script.js",
       "SourceId": "HotelSystem",
       "SourceType": "Discovered",
@@ -2635,8 +2698,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u8ewdwx8qe",
-      "Integrity": "4jLiXzB9YXqbU6Zy8xpdYTT+fNWk/LQalE9guwhDeBU=",
+      "Fingerprint": "2gwegur560",
+      "Integrity": "wtP384idTvdAaXbV3LuPtatlh/AGv2T7WFwwtjkHLz0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script.js"
@@ -2656,8 +2719,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "89vukluz27",
-      "Integrity": "RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8=",
+      "Fingerprint": "0fiw5vx2n9",
+      "Integrity": "xEkWm8ag3dzHfCutyYXibFH5+HEUBzd8ZLLIfaFnSZI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\style.css"
@@ -2677,11 +2740,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9kj06oga2y",
-      "Integrity": "9/aMF7PDZ7K41Xs1nDsd4and/wo1lxfQuTJVHfu3pmA=",
+      "Fingerprint": "6itmib07fk",
+      "Integrity": "3lzFJdFDnhQ5B0F1ssX0g7QwHcB3X4ghcUXNGDNHhgE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\web project\\admin.html"
+    },
+    {
+      "Identity": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\home.html",
+      "SourceId": "HotelSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\",
+      "BasePath": "_content/HotelSystem",
+      "RelativePath": "web project/home#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dm5ekoxshc",
+      "Integrity": "9RcbUt07U0JQMsHipV2kO6tv2RWUlNWxqvaG7Y4WiXg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\web project\\home.html"
     },
     {
       "Identity": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\index.html",
@@ -2698,11 +2782,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "n33qilmjbi",
-      "Integrity": "zYdzZycGSx6GdfkZuwRG0YIASrE4uNmfLk1x/JvGWKk=",
+      "Fingerprint": "6qyf9gjibx",
+      "Integrity": "jvbpvcpMtxl+S24vWBp3r5p3xqvneNHwJ7vCa9YB+qo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\web project\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\receipt.html",
+      "SourceId": "HotelSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\",
+      "BasePath": "_content/HotelSystem",
+      "RelativePath": "web project/receipt#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xg26d4fe3n",
+      "Integrity": "AX9ExUBUX8pQG0LnLZfA25Gp/Xnknk2VXZgyG/8Z80A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\web project\\receipt.html"
     },
     {
       "Identity": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\script.js",
@@ -2719,8 +2824,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6my334z74g",
-      "Integrity": "Ass+DVidJ8mXpOS6x7um9pA5MZimFWfEgsQhDCmqQAw=",
+      "Fingerprint": "vxo43jvkiw",
+      "Integrity": "Q1ZcWDkQJRMoPLlYdP1GTxLk6FP5Jp+If8KwbvCFLhA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\web project\\script.js"
@@ -2740,59 +2845,14 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "89vukluz27",
-      "Integrity": "RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8=",
+      "Fingerprint": "gae8sqqkzy",
+      "Integrity": "WN7HTdYnmuUPvdBXqdKUQwqAs4/LDd8g9fNom0L2EQ0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\web project\\style.css"
     }
   ],
   "Endpoints": [
-    {
-      "Route": "admin.hbnnf4h46e.html",
-      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\admin.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3326"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MxtdZaG/pWPjPT6SVRBrf6K6CnP5wD0h9j9gxm0ytpY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 18:12:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "hbnnf4h46e"
-        },
-        {
-          "Name": "label",
-          "Value": "admin.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-MxtdZaG/pWPjPT6SVRBrf6K6CnP5wD0h9j9gxm0ytpY="
-        }
-      ]
-    },
     {
       "Route": "admin.html",
       "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\admin.html",
@@ -2804,7 +2864,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3326"
+          "Value": "3208"
         },
         {
           "Name": "Content-Type",
@@ -2812,11 +2872,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MxtdZaG/pWPjPT6SVRBrf6K6CnP5wD0h9j9gxm0ytpY=\""
+          "Value": "\"R8Y3E9HlfQxwUh3g3KYL0nn4fx3ssusvEYjRaiJQdoM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 18:12:53 GMT"
+          "Value": "Thu, 11 Dec 2025 18:45:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2826,7 +2886,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-MxtdZaG/pWPjPT6SVRBrf6K6CnP5wD0h9j9gxm0ytpY="
+          "Value": "sha256-R8Y3E9HlfQxwUh3g3KYL0nn4fx3ssusvEYjRaiJQdoM="
+        }
+      ]
+    },
+    {
+      "Route": "admin.jx16bfz38u.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\admin.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3208"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R8Y3E9HlfQxwUh3g3KYL0nn4fx3ssusvEYjRaiJQdoM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Dec 2025 18:45:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jx16bfz38u"
+        },
+        {
+          "Name": "label",
+          "Value": "admin.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R8Y3E9HlfQxwUh3g3KYL0nn4fx3ssusvEYjRaiJQdoM="
         }
       ]
     },
@@ -2991,6 +3096,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "guest-login.bo0so5j9ik.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\guest-login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lVG/uHbOjo3gUuhCQzbgvIvW/5AUolN10Os/Er42CLI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Dec 2025 18:17:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bo0so5j9ik"
+        },
+        {
+          "Name": "label",
+          "Value": "guest-login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lVG/uHbOjo3gUuhCQzbgvIvW/5AUolN10Os/Er42CLI="
+        }
+      ]
+    },
+    {
+      "Route": "guest-login.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\guest-login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lVG/uHbOjo3gUuhCQzbgvIvW/5AUolN10Os/Er42CLI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Dec 2025 18:17:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lVG/uHbOjo3gUuhCQzbgvIvW/5AUolN10Os/Er42CLI="
+        }
+      ]
+    },
+    {
+      "Route": "home.fwkfwwq73z.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\home.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1125"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jxeOedGEu6FbhrJCMEG9Yg5+gw27OrybBY1/jrT90VY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Dec 2025 14:21:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fwkfwwq73z"
+        },
+        {
+          "Name": "label",
+          "Value": "home.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jxeOedGEu6FbhrJCMEG9Yg5+gw27OrybBY1/jrT90VY="
+        }
+      ]
+    },
+    {
+      "Route": "home.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\home.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1125"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jxeOedGEu6FbhrJCMEG9Yg5+gw27OrybBY1/jrT90VY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Dec 2025 14:21:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jxeOedGEu6FbhrJCMEG9Yg5+gw27OrybBY1/jrT90VY="
         }
       ]
     },
@@ -5379,6 +5648,51 @@
       ]
     },
     {
+      "Route": "index.ay885mbc6e.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rjOBdvXZqm3+4uHBb/g/cz913KHWk5Lv0/09inz9gBY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Dec 2025 14:22:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ay885mbc6e"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rjOBdvXZqm3+4uHBb/g/cz913KHWk5Lv0/09inz9gBY="
+        }
+      ]
+    },
+    {
       "Route": "index.html",
       "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\index.html",
       "Selectors": [],
@@ -5389,7 +5703,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4535"
+          "Value": "4530"
         },
         {
           "Name": "Content-Type",
@@ -5397,11 +5711,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9C4Ghjo4dGJUO5nb5tRZ6VQJKBMvx6ydXCNQMdvm3/k=\""
+          "Value": "\"rjOBdvXZqm3+4uHBb/g/cz913KHWk5Lv0/09inz9gBY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 20:23:13 GMT"
+          "Value": "Wed, 10 Dec 2025 14:22:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5411,52 +5725,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9C4Ghjo4dGJUO5nb5tRZ6VQJKBMvx6ydXCNQMdvm3/k="
-        }
-      ]
-    },
-    {
-      "Route": "index.ko0uomy6a4.html",
-      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4535"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9C4Ghjo4dGJUO5nb5tRZ6VQJKBMvx6ydXCNQMdvm3/k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 20:23:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ko0uomy6a4"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-9C4Ghjo4dGJUO5nb5tRZ6VQJKBMvx6ydXCNQMdvm3/k="
+          "Value": "sha256-rjOBdvXZqm3+4uHBb/g/cz913KHWk5Lv0/09inz9gBY="
         }
       ]
     },
@@ -10217,6 +10486,133 @@
       ]
     },
     {
+      "Route": "receipt.3jyfdo2usg.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\receipt.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cXYC8tAxuHufynAn4m4c1idlcvLbnglhpL6Bxu/aETA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Dec 2025 18:45:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3jyfdo2usg"
+        },
+        {
+          "Name": "label",
+          "Value": "receipt.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cXYC8tAxuHufynAn4m4c1idlcvLbnglhpL6Bxu/aETA="
+        }
+      ]
+    },
+    {
+      "Route": "receipt.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\receipt.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cXYC8tAxuHufynAn4m4c1idlcvLbnglhpL6Bxu/aETA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Dec 2025 18:45:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cXYC8tAxuHufynAn4m4c1idlcvLbnglhpL6Bxu/aETA="
+        }
+      ]
+    },
+    {
+      "Route": "script.2gwegur560.js",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23225"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wtP384idTvdAaXbV3LuPtatlh/AGv2T7WFwwtjkHLz0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Dec 2025 18:45:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2gwegur560"
+        },
+        {
+          "Name": "label",
+          "Value": "script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wtP384idTvdAaXbV3LuPtatlh/AGv2T7WFwwtjkHLz0="
+        }
+      ]
+    },
+    {
       "Route": "script.js",
       "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\script.js",
       "Selectors": [],
@@ -10227,7 +10623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22958"
+          "Value": "23225"
         },
         {
           "Name": "Content-Type",
@@ -10235,11 +10631,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4jLiXzB9YXqbU6Zy8xpdYTT+fNWk/LQalE9guwhDeBU=\""
+          "Value": "\"wtP384idTvdAaXbV3LuPtatlh/AGv2T7WFwwtjkHLz0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 18:08:26 GMT"
+          "Value": "Thu, 11 Dec 2025 18:45:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10249,57 +10645,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4jLiXzB9YXqbU6Zy8xpdYTT+fNWk/LQalE9guwhDeBU="
+          "Value": "sha256-wtP384idTvdAaXbV3LuPtatlh/AGv2T7WFwwtjkHLz0="
         }
       ]
     },
     {
-      "Route": "script.u8ewdwx8qe.js",
-      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\script.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "22958"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4jLiXzB9YXqbU6Zy8xpdYTT+fNWk/LQalE9guwhDeBU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 05 Dec 2025 18:08:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "u8ewdwx8qe"
-        },
-        {
-          "Name": "label",
-          "Value": "script.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4jLiXzB9YXqbU6Zy8xpdYTT+fNWk/LQalE9guwhDeBU="
-        }
-      ]
-    },
-    {
-      "Route": "style.89vukluz27.css",
+      "Route": "style.0fiw5vx2n9.css",
       "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -10309,7 +10660,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1142"
+          "Value": "5282"
         },
         {
           "Name": "Content-Type",
@@ -10317,11 +10668,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8=\""
+          "Value": "\"xEkWm8ag3dzHfCutyYXibFH5+HEUBzd8ZLLIfaFnSZI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:14:26 GMT"
+          "Value": "Sun, 07 Dec 2025 19:55:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10331,7 +10682,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "89vukluz27"
+          "Value": "0fiw5vx2n9"
         },
         {
           "Name": "label",
@@ -10339,7 +10690,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8="
+          "Value": "sha256-xEkWm8ag3dzHfCutyYXibFH5+HEUBzd8ZLLIfaFnSZI="
         }
       ]
     },
@@ -10354,7 +10705,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1142"
+          "Value": "5282"
         },
         {
           "Name": "Content-Type",
@@ -10362,11 +10713,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8=\""
+          "Value": "\"xEkWm8ag3dzHfCutyYXibFH5+HEUBzd8ZLLIfaFnSZI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:14:26 GMT"
+          "Value": "Sun, 07 Dec 2025 19:55:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10376,12 +10727,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8="
+          "Value": "sha256-xEkWm8ag3dzHfCutyYXibFH5+HEUBzd8ZLLIfaFnSZI="
         }
       ]
     },
     {
-      "Route": "web project/admin.9kj06oga2y.html",
+      "Route": "web project/admin.6itmib07fk.html",
       "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\admin.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -10391,7 +10742,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1965"
+          "Value": "16392"
         },
         {
           "Name": "Content-Type",
@@ -10399,11 +10750,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9/aMF7PDZ7K41Xs1nDsd4and/wo1lxfQuTJVHfu3pmA=\""
+          "Value": "\"3lzFJdFDnhQ5B0F1ssX0g7QwHcB3X4ghcUXNGDNHhgE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:14:26 GMT"
+          "Value": "Thu, 11 Dec 2025 20:36:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10413,7 +10764,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9kj06oga2y"
+          "Value": "6itmib07fk"
         },
         {
           "Name": "label",
@@ -10421,7 +10772,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-9/aMF7PDZ7K41Xs1nDsd4and/wo1lxfQuTJVHfu3pmA="
+          "Value": "sha256-3lzFJdFDnhQ5B0F1ssX0g7QwHcB3X4ghcUXNGDNHhgE="
         }
       ]
     },
@@ -10436,7 +10787,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1965"
+          "Value": "16392"
         },
         {
           "Name": "Content-Type",
@@ -10444,11 +10795,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9/aMF7PDZ7K41Xs1nDsd4and/wo1lxfQuTJVHfu3pmA=\""
+          "Value": "\"3lzFJdFDnhQ5B0F1ssX0g7QwHcB3X4ghcUXNGDNHhgE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:14:26 GMT"
+          "Value": "Thu, 11 Dec 2025 20:36:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10458,7 +10809,134 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9/aMF7PDZ7K41Xs1nDsd4and/wo1lxfQuTJVHfu3pmA="
+          "Value": "sha256-3lzFJdFDnhQ5B0F1ssX0g7QwHcB3X4ghcUXNGDNHhgE="
+        }
+      ]
+    },
+    {
+      "Route": "web project/home.dm5ekoxshc.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\home.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6295"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9RcbUt07U0JQMsHipV2kO6tv2RWUlNWxqvaG7Y4WiXg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Dec 2025 11:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dm5ekoxshc"
+        },
+        {
+          "Name": "label",
+          "Value": "web project/home.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9RcbUt07U0JQMsHipV2kO6tv2RWUlNWxqvaG7Y4WiXg="
+        }
+      ]
+    },
+    {
+      "Route": "web project/home.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\home.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6295"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9RcbUt07U0JQMsHipV2kO6tv2RWUlNWxqvaG7Y4WiXg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Dec 2025 11:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9RcbUt07U0JQMsHipV2kO6tv2RWUlNWxqvaG7Y4WiXg="
+        }
+      ]
+    },
+    {
+      "Route": "web project/index.6qyf9gjibx.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7359"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jvbpvcpMtxl+S24vWBp3r5p3xqvneNHwJ7vCa9YB+qo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Dec 2025 20:36:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6qyf9gjibx"
+        },
+        {
+          "Name": "label",
+          "Value": "web project/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jvbpvcpMtxl+S24vWBp3r5p3xqvneNHwJ7vCa9YB+qo="
         }
       ]
     },
@@ -10473,7 +10951,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3123"
+          "Value": "7359"
         },
         {
           "Name": "Content-Type",
@@ -10481,11 +10959,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zYdzZycGSx6GdfkZuwRG0YIASrE4uNmfLk1x/JvGWKk=\""
+          "Value": "\"jvbpvcpMtxl+S24vWBp3r5p3xqvneNHwJ7vCa9YB+qo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:23:16 GMT"
+          "Value": "Thu, 11 Dec 2025 20:36:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10495,13 +10973,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zYdzZycGSx6GdfkZuwRG0YIASrE4uNmfLk1x/JvGWKk="
+          "Value": "sha256-jvbpvcpMtxl+S24vWBp3r5p3xqvneNHwJ7vCa9YB+qo="
         }
       ]
     },
     {
-      "Route": "web project/index.n33qilmjbi.html",
-      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\index.html",
+      "Route": "web project/receipt.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\receipt.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10510,7 +10988,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3123"
+          "Value": "3202"
         },
         {
           "Name": "Content-Type",
@@ -10518,35 +10996,27 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zYdzZycGSx6GdfkZuwRG0YIASrE4uNmfLk1x/JvGWKk=\""
+          "Value": "\"AX9ExUBUX8pQG0LnLZfA25Gp/Xnknk2VXZgyG/8Z80A=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:23:16 GMT"
+          "Value": "Thu, 11 Dec 2025 20:12:48 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "n33qilmjbi"
-        },
-        {
-          "Name": "label",
-          "Value": "web project/index.html"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-zYdzZycGSx6GdfkZuwRG0YIASrE4uNmfLk1x/JvGWKk="
+          "Value": "sha256-AX9ExUBUX8pQG0LnLZfA25Gp/Xnknk2VXZgyG/8Z80A="
         }
       ]
     },
     {
-      "Route": "web project/script.6my334z74g.js",
-      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\script.js",
+      "Route": "web project/receipt.xg26d4fe3n.html",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\receipt.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10555,19 +11025,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3576"
+          "Value": "3202"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/javascript"
+          "Value": "text/html"
         },
         {
           "Name": "ETag",
-          "Value": "\"Ass+DVidJ8mXpOS6x7um9pA5MZimFWfEgsQhDCmqQAw=\""
+          "Value": "\"AX9ExUBUX8pQG0LnLZfA25Gp/Xnknk2VXZgyG/8Z80A=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:14:21 GMT"
+          "Value": "Thu, 11 Dec 2025 20:12:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10577,15 +11047,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6my334z74g"
+          "Value": "xg26d4fe3n"
         },
         {
           "Name": "label",
-          "Value": "web project/script.js"
+          "Value": "web project/receipt.html"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Ass+DVidJ8mXpOS6x7um9pA5MZimFWfEgsQhDCmqQAw="
+          "Value": "sha256-AX9ExUBUX8pQG0LnLZfA25Gp/Xnknk2VXZgyG/8Z80A="
         }
       ]
     },
@@ -10600,7 +11070,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3576"
+          "Value": "48896"
         },
         {
           "Name": "Content-Type",
@@ -10608,11 +11078,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ass+DVidJ8mXpOS6x7um9pA5MZimFWfEgsQhDCmqQAw=\""
+          "Value": "\"Q1ZcWDkQJRMoPLlYdP1GTxLk6FP5Jp+If8KwbvCFLhA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:14:21 GMT"
+          "Value": "Thu, 11 Dec 2025 20:12:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10622,13 +11092,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ass+DVidJ8mXpOS6x7um9pA5MZimFWfEgsQhDCmqQAw="
+          "Value": "sha256-Q1ZcWDkQJRMoPLlYdP1GTxLk6FP5Jp+If8KwbvCFLhA="
         }
       ]
     },
     {
-      "Route": "web project/style.89vukluz27.css",
-      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\style.css",
+      "Route": "web project/script.vxo43jvkiw.js",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10637,19 +11107,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1142"
+          "Value": "48896"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "text/javascript"
         },
         {
           "Name": "ETag",
-          "Value": "\"RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8=\""
+          "Value": "\"Q1ZcWDkQJRMoPLlYdP1GTxLk6FP5Jp+If8KwbvCFLhA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:14:26 GMT"
+          "Value": "Thu, 11 Dec 2025 20:12:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10659,15 +11129,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "89vukluz27"
+          "Value": "vxo43jvkiw"
         },
         {
           "Name": "label",
-          "Value": "web project/style.css"
+          "Value": "web project/script.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8="
+          "Value": "sha256-Q1ZcWDkQJRMoPLlYdP1GTxLk6FP5Jp+If8KwbvCFLhA="
         }
       ]
     },
@@ -10682,7 +11152,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1142"
+          "Value": "11415"
         },
         {
           "Name": "Content-Type",
@@ -10690,11 +11160,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8=\""
+          "Value": "\"WN7HTdYnmuUPvdBXqdKUQwqAs4/LDd8g9fNom0L2EQ0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Nov 2025 20:14:26 GMT"
+          "Value": "Thu, 11 Dec 2025 18:58:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10704,7 +11174,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8="
+          "Value": "sha256-WN7HTdYnmuUPvdBXqdKUQwqAs4/LDd8g9fNom0L2EQ0="
+        }
+      ]
+    },
+    {
+      "Route": "web project/style.gae8sqqkzy.css",
+      "AssetFile": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11415"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WN7HTdYnmuUPvdBXqdKUQwqAs4/LDd8g9fNom0L2EQ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Dec 2025 18:58:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gae8sqqkzy"
+        },
+        {
+          "Name": "label",
+          "Value": "web project/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WN7HTdYnmuUPvdBXqdKUQwqAs4/LDd8g9fNom0L2EQ0="
         }
       ]
     }

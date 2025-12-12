@@ -15,7 +15,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        // Redirect to the main home page
+        return Redirect("/web%20project/home.html");
     }
 
     public IActionResult Privacy()

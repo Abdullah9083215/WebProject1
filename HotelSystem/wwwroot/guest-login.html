@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Access - Grand Luxe Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --secondary-gold: #FFD700;
+            --dark-elegant: #1a1a1a;
+            --light-gray: #f8f9fa;
+            --gradient-start: #2C3E50;
+            --gradient-end: #34495E;
+            --accent-blue: #3498DB;
+            --success-green: #27AE60;
+            --danger-red: #E74C3C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .auth-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            max-width: 450px;
+            width: 100%;
+            position: relative;
+        }
+
+        .auth-header {
+            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+            padding: 2rem;
+            text-align: center;
+            color: var(--dark-elegant);
+        }
+
+        .auth-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .auth-header p {
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .auth-body {
+            padding: 2.5rem;
+        }
+
+        .form-tabs {
+            display: flex;
+            margin-bottom: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 0.3rem;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #6c757d;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .tab-btn.active {
+            background: white;
+            color: var(--dark-elegant);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--dark-elegant);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .form-control.is-invalid {
+            border-color: var(--danger-red);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+
+        .invalid-feedback {
+            color: var(--danger-red);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .btn-auth {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--accent-blue), #2980B9);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .btn-auth:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+            background: linear-gradient(135deg, #2980B9, var(--accent-blue));
+        }
+
+        .btn-auth:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 1.5rem 0;
+            position: relative;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e9ecef;
+        }
+
+        .divider span {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .back-link a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            color: #2980B9;
+            text-decoration: underline;
+        }
+
+        .alert-custom {
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: none;
+        }
+
+        .alert-success {
+            background: rgba(39, 174, 96, 0.1);
+            color: var(--success-green);
+            border-left: 4px solid var(--success-green);
+        }
+
+        .alert-danger {
+            background: rgba(231, 76, 60, 0.1);
+            color: var(--danger-red);
+            border-left: 4px solid var(--danger-red);
+        }
+
+        @media (max-width: 480px) {
+            .auth-container {
+                margin: 1rem;
+                max-width: none;
+            }
+
+            .auth-header {
+                padding: 1.5rem;
+            }
+
+            .auth-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .auth-body {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-tabs {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .spinner-border-sm {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        @keyframes successPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .success-animation {
+            animation: successPulse 0.6s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <h2><i class="fas fa-concierge-bell"></i> Guest Portal</h2>
+            <p>Access your booking experience</p>
+        </div>
+
+        <div class="auth-body">
+            <div id="alertContainer"></div>
+
+            <div class="form-tabs">
+                <button class="tab-btn active" onclick="switchTab(login)">Sign In</button>
+                <button class="tab-btn" onclick="switchTab(register)">Register</button>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label class="form-label" for="loginName">Full Name</label>
+                    <input type="text" class="form-control" id="loginName" placeholder="Enter your full name" required>
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="loginPhone">Phone Number</label>
+                    <input type="tel" class="form-control" id="loginPhone" placeholder="Enter your phone number" required>
+                    <div class="invalid-feedback">Please enter your phone number.</div>
+                </div>
+
+                <button type="submit" class="btn-auth" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i> Continue as Guest
+                </button>
+            </form>
+
+            <form id="registerForm" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label class="form-label" for="registerName">Full Name</label>
+                    <input type="text" class="form-control" id="registerName" placeholder="Enter your full name" required>
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="registerPhone">Phone Number</label>
+                    <input type="tel" class="form-control" id="registerPhone" placeholder="Enter your phone number" required>
+                    <div class="invalid-feedback">Please enter your phone number.</div>
+                </div>
+
+                <button type="submit" class="btn-auth" id="registerBtn">
+                    <i class="fas fa-user-plus"></i> Register as Guest
+                </button>
+            </form>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <div class="back-link">
+                <a href="home.html">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let currentUser = null;
+        const API_BASE = "";
+        const GUESTS_API = `${API_BASE}/api/guests`;
+
+        async function fetchGuests() {
+            try {
+                const response = await fetch(GUESTS_API);
+                if (!response.ok) throw new Error("Failed to fetch guests");
+                return await response.json();
+            } catch (error) {
+                console.error("Error fetching guests:", error);
+                return [];
+            }
+        }
+
+        async function createGuest(guestData) {
+            try {
+                const response = await fetch(GUESTS_API, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(guestData)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Failed to create guest: ${response.status}`);
+                }
+
+                return await response.json();
+            } catch (error) {
+                console.error("Error creating guest:", error);
+                throw error;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedUser = localStorage.getItem("guestUser");
+            if (savedUser) {
+                currentUser = JSON.parse(savedUser);
+                window.location.href = "index.html";
+                return;
+            }
+            initializeForms();
+        });
+
+        function initializeForms() {
+            document.getElementById("loginForm").addEventListener("submit", handleLogin);
+            document.getElementById("registerForm").addEventListener("submit", handleRegister);
+        }
+
+        function switchTab(tab) {
+            const loginTab = document.querySelector(".tab-btn:nth-child(1)");
+            const registerTab = document.querySelector(".tab-btn:nth-child(2)");
+            const loginForm = document.getElementById("loginForm");
+            const registerForm = document.getElementById("registerForm");
+
+            if (tab === "login") {
+                loginTab.classList.add("active");
+                registerTab.classList.remove("active");
+                loginForm.style.display = "block";
+                registerForm.style.display = "none";
+            } else {
+                registerTab.classList.add("active");
+                loginTab.classList.remove("active");
+                registerForm.style.display = "block";
+                loginForm.style.display = "none";
+            }
+        }
+
+        async function handleLogin(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("loginName").value.trim();
+            const phone = document.getElementById("loginPhone").value.trim();
+
+            if (!name || !phone) {
+                showAlert("Please fill in all fields.", "danger");
+                return;
+            }
+
+            const btn = document.getElementById("loginBtn");
+            btn.disabled = true;
+            btn.innerHTML = "<span class=\"spinner-border spinner-border-sm me-2\"></span>Continuing...";
+
+            try {
+                const existingGuests = await fetchGuests();
+                const existingGuest = existingGuests.find(g => g.contact === phone);
+
+                if (existingGuest) {
+                    if (existingGuest.name.toLowerCase() !== name.toLowerCase()) {
+                        throw new Error("Name and phone number do not match our records.");
+                    }
+                    currentUser = {
+                        id: existingGuest.id,
+                        name: existingGuest.name,
+                        phone: existingGuest.contact
+                    };
+                } else {
+                    console.log("Creating new guest...");
+                    const newGuest = await createGuest({
+                        name: name,
+                        contact: phone
+                    });
+                    currentUser = {
+                        id: newGuest.id,
+                        name: newGuest.name,
+                        phone: newGuest.contact
+                    };
+                }
+
+                localStorage.setItem("guestUser", JSON.stringify(currentUser));
+                showAlert(`Welcome${existingGuest ? " back" : ""}, ${currentUser.name}! Redirecting...`, "success");
+
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 1500);
+
+            } catch (error) {
+                showAlert(error.message, "danger");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = "<i class=\"fas fa-sign-in-alt\"></i> Continue as Guest";
+            }
+        }
+
+        async function handleRegister(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("registerName").value.trim();
+            const phone = document.getElementById("registerPhone").value.trim();
+
+            if (!name || !phone) {
+                showAlert("Please fill in all fields.", "danger");
+                return;
+            }
+
+            const btn = document.getElementById("registerBtn");
+            btn.disabled = true;
+            btn.innerHTML = "<span class=\"spinner-border spinner-border-sm me-2\"></span>Registering...";
+
+            try {
+                const existingGuests = await fetchGuests();
+                const existingGuest = existingGuests.find(g => g.contact === phone);
+
+                if (existingGuest) {
+                    throw new Error("A guest with this phone number already exists.");
+                }
+
+                console.log("Creating new guest in database...");
+                const newGuest = await createGuest({
+                    name: name,
+                    contact: phone
+                });
+
+                currentUser = {
+                    id: newGuest.id,
+                    name: newGuest.name,
+                    phone: newGuest.contact
+                };
+
+                localStorage.setItem("guestUser", JSON.stringify(currentUser));
+                showAlert("Guest registered successfully! Redirecting...", "success");
+
+                document.querySelector(".auth-container").classList.add("success-animation");
+
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 2000);
+
+            } catch (error) {
+                showAlert(error.message, "danger");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = "<i class=\"fas fa-user-plus\"></i> Register as Guest";
+            }
+        }
+
+        function showAlert(message, type) {
+            const alertContainer = document.getElementById("alertContainer");
+            alertContainer.innerHTML = `
+                <div class="alert alert-${type} alert-custom">
+                    <i class="fas fa-${type === "success" ? "check-circle" : "exclamation-triangle"} me-2"></i>
+                    ${message}
+                </div>
+            `;
+
+            setTimeout(() => {
+                alertContainer.innerHTML = "";
+            }, 5000);
+        }
+
+        function validatePhone(phone) {
+            const re = /^[\+]?[1-9][\d]{0,15}$/;
+            return re.test(phone.replace(/[\s\-\(\)]/g, ""));
+        }
+
+        document.querySelectorAll(".form-control").forEach(input => {
+            input.addEventListener("blur", function() {
+                validateField(this);
+            });
+        });
+
+        function validateField(field) {
+            const value = field.value.trim();
+            let isValid = true;
+
+            field.classList.remove("is-invalid");
+
+            if (field.id === "registerPhone" || field.id === "loginPhone") {
+                isValid = validatePhone(value);
+            } else if (field.id.includes("Name")) {
+                isValid = value.length >= 2;
+            }
+
+            if (!isValid && value) {
+                field.classList.add("is-invalid");
+            }
+        }
+    </script>
+</body>
+</html>

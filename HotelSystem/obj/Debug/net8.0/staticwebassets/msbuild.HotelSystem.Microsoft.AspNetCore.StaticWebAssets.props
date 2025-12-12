@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hbnnf4h46e</Fingerprint>
-      <Integrity>MxtdZaG/pWPjPT6SVRBrf6K6CnP5wD0h9j9gxm0ytpY=</Integrity>
+      <Fingerprint>jx16bfz38u</Fingerprint>
+      <Integrity>R8Y3E9HlfQxwUh3g3KYL0nn4fx3ssusvEYjRaiJQdoM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin.html'))</OriginalItemSpec>
@@ -54,6 +54,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\guest-login.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelSystem</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelSystem</BasePath>
+      <RelativePath>guest-login.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>bo0so5j9ik</Fingerprint>
+      <Integrity>lVG/uHbOjo3gUuhCQzbgvIvW/5AUolN10Os/Er42CLI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\guest-login.html'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\home.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelSystem</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelSystem</BasePath>
+      <RelativePath>home.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fwkfwwq73z</Fingerprint>
+      <Integrity>jxeOedGEu6FbhrJCMEG9Yg5+gw27OrybBY1/jrT90VY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\home.html'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HotelSystem.w5vfd9wp42.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>HotelSystem</SourceId>
@@ -84,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ko0uomy6a4</Fingerprint>
-      <Integrity>9C4Ghjo4dGJUO5nb5tRZ6VQJKBMvx6ydXCNQMdvm3/k=</Integrity>
+      <Fingerprint>ay885mbc6e</Fingerprint>
+      <Integrity>rjOBdvXZqm3+4uHBb/g/cz913KHWk5Lv0/09inz9gBY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
@@ -1134,6 +1170,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\receipt.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelSystem</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelSystem</BasePath>
+      <RelativePath>receipt.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3jyfdo2usg</Fingerprint>
+      <Integrity>cXYC8tAxuHufynAn4m4c1idlcvLbnglhpL6Bxu/aETA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\receipt.html'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script.js'))">
       <SourceType>Package</SourceType>
       <SourceId>HotelSystem</SourceId>
@@ -1146,8 +1200,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>u8ewdwx8qe</Fingerprint>
-      <Integrity>4jLiXzB9YXqbU6Zy8xpdYTT+fNWk/LQalE9guwhDeBU=</Integrity>
+      <Fingerprint>2gwegur560</Fingerprint>
+      <Integrity>wtP384idTvdAaXbV3LuPtatlh/AGv2T7WFwwtjkHLz0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script.js'))</OriginalItemSpec>
@@ -1164,8 +1218,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>89vukluz27</Fingerprint>
-      <Integrity>RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8=</Integrity>
+      <Fingerprint>0fiw5vx2n9</Fingerprint>
+      <Integrity>xEkWm8ag3dzHfCutyYXibFH5+HEUBzd8ZLLIfaFnSZI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\style.css'))</OriginalItemSpec>
@@ -1182,11 +1236,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9kj06oga2y</Fingerprint>
-      <Integrity>9/aMF7PDZ7K41Xs1nDsd4and/wo1lxfQuTJVHfu3pmA=</Integrity>
+      <Fingerprint>6itmib07fk</Fingerprint>
+      <Integrity>3lzFJdFDnhQ5B0F1ssX0g7QwHcB3X4ghcUXNGDNHhgE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\admin.html'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\home.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelSystem</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelSystem</BasePath>
+      <RelativePath>web project/home.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dm5ekoxshc</Fingerprint>
+      <Integrity>9RcbUt07U0JQMsHipV2kO6tv2RWUlNWxqvaG7Y4WiXg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\home.html'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\index.html'))">
       <SourceType>Package</SourceType>
@@ -1200,11 +1272,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n33qilmjbi</Fingerprint>
-      <Integrity>zYdzZycGSx6GdfkZuwRG0YIASrE4uNmfLk1x/JvGWKk=</Integrity>
+      <Fingerprint>6qyf9gjibx</Fingerprint>
+      <Integrity>jvbpvcpMtxl+S24vWBp3r5p3xqvneNHwJ7vCa9YB+qo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\index.html'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\receipt.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelSystem</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelSystem</BasePath>
+      <RelativePath>web project/receipt.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xg26d4fe3n</Fingerprint>
+      <Integrity>AX9ExUBUX8pQG0LnLZfA25Gp/Xnknk2VXZgyG/8Z80A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\receipt.html'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\script.js'))">
       <SourceType>Package</SourceType>
@@ -1218,8 +1308,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6my334z74g</Fingerprint>
-      <Integrity>Ass+DVidJ8mXpOS6x7um9pA5MZimFWfEgsQhDCmqQAw=</Integrity>
+      <Fingerprint>vxo43jvkiw</Fingerprint>
+      <Integrity>Q1ZcWDkQJRMoPLlYdP1GTxLk6FP5Jp+If8KwbvCFLhA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\script.js'))</OriginalItemSpec>
@@ -1236,8 +1326,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>89vukluz27</Fingerprint>
-      <Integrity>RF6F4R6TzPi5DjmZbDsjsoYB52FAaRGTz/R2YQtKWu8=</Integrity>
+      <Fingerprint>gae8sqqkzy</Fingerprint>
+      <Integrity>WN7HTdYnmuUPvdBXqdKUQwqAs4/LDd8g9fNom0L2EQ0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web project\style.css'))</OriginalItemSpec>

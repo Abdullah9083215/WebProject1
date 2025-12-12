@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Luxe Hotel</title>
+    <title data-i18n="title">Grand Luxe Hotel</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -13,25 +13,53 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg glass-nav fixed-top">
     <div class="container">
-        <a class="navbar-brand fw-bold fs-3 text-white"> Hotel Mangment System</a>
-
-        <button class="btn btn-outline-light" id="darkToggle">🌙</button>
+        <a class="navbar-brand fw-bold fs-3 text-white" data-i18n="nav.brand">Hotel Management System</a>
+        <div class="d-flex gap-2">
+            <select id="languageSelect" class="form-select form-select-sm" style="width: auto;">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+            </select>
+            <button class="btn btn-outline-light" id="darkToggle">🌙</button>
+        </div>
     </div>
 </nav>
 
 <!-- HERO -->
 <header id="hero">
     <div class="hero-content text-white text-center">
-        <h1 class="display-3 fw-bold fade-in">Experience Luxury</h1>
-        <p class="lead fade-in delay-1">Enjoy the finest hospitality and elegance.</p>
-        <a href="#rooms" class="btn btn-light btn-lg glow-button fade-in delay-2">Discover Rooms</a>
+        <h1 class="display-3 fw-bold fade-in" data-i18n="hero.title">Experience Luxury</h1>
+        <p class="lead fade-in delay-1" data-i18n="hero.subtitle">Enjoy the finest hospitality and elegance.</p>
+        <a href="#rooms" class="btn btn-light btn-lg glow-button fade-in delay-2" data-i18n="hero.button">Discover Rooms</a>
     </div>
 </header>
 
 <!-- ROOMS -->
 <section id="rooms" class="py-5">
     <div class="container">
-        <h2 class="text-center mb-5 section-title fade-in">Available Rooms</h2>
+        <h2 class="text-center mb-5 section-title fade-in" data-i18n="rooms.title">Available Rooms</h2>
+
+        <!-- Search and Filter -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <input type="text" id="roomSearch" class="form-control modern-input" 
+                       placeholder="Search rooms..." data-i18n-placeholder="rooms.search">
+            </div>
+            <div class="col-md-3">
+                <select id="roomTypeFilter" class="form-select modern-input">
+                    <option value="" data-i18n="rooms.filter.all">All Types</option>
+                    <option value="Single" data-i18n="rooms.filter.single">Single</option>
+                    <option value="Double" data-i18n="rooms.filter.double">Double</option>
+                    <option value="Suite" data-i18n="rooms.filter.suite">Suite</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="availabilityFilter" class="form-select modern-input">
+                    <option value="" data-i18n="rooms.filter.all">All</option>
+                    <option value="true" data-i18n="rooms.filter.available">Available</option>
+                    <option value="false" data-i18n="rooms.filter.unavailable">Unavailable</option>
+                </select>
+            </div>
+        </div>
 
         <div class="row g-4" id="roomsContainer">
             <!-- Rooms will be inserted from JS -->
@@ -42,48 +70,94 @@
 <!-- BOOKING -->
 <section id="booking" class="py-5 bg-light">
     <div class="container">
-
-        <h2 class="text-center mb-4 section-title fade-in">Book Your Stay</h2>
+        <h2 class="text-center mb-4 section-title fade-in" data-i18n="booking.title">Book Your Stay</h2>
 
         <form id="bookingForm" class="glass-card p-4 shadow-lg fade-in-up">
             <div class="row g-3">
-
                 <div class="col-md-6">
-                    <label class="form-label">Full Name</label>
+                    <label class="form-label" data-i18n="booking.name">Full Name</label>
                     <input id="name" class="form-control modern-input" required>
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-label">Phone</label>
+                    <label class="form-label" data-i18n="booking.email">Email</label>
+                    <input type="email" id="email" class="form-control modern-input" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" data-i18n="booking.phone">Phone</label>
                     <input id="phone" class="form-control modern-input" required>
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-label">Check-in</label>
+                    <label class="form-label" data-i18n="booking.room">Room</label>
+                    <select id="roomSelect" class="form-select modern-input" required></select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" data-i18n="booking.checkin">Check-in</label>
                     <input type="date" id="checkin" class="form-control modern-input" required>
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-label">Check-out</label>
+                    <label class="form-label" data-i18n="booking.checkout">Check-out</label>
                     <input type="date" id="checkout" class="form-control modern-input" required>
                 </div>
 
                 <div class="col-12">
-                    <label class="form-label">Room Type</label>
-                    <select id="roomSelect" class="form-select modern-input"></select>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sendEmail">
+                        <label class="form-check-label" for="sendEmail" data-i18n="booking.sendEmail">
+                            Send confirmation email
+                        </label>
+                    </div>
                 </div>
 
                 <div class="col-12 text-center">
-                    <button class="btn btn-primary btn-lg glow-button mt-3 px-5">Confirm Booking</button>
+                    <button type="submit" class="btn btn-primary btn-lg glow-button mt-3 px-5" data-i18n="booking.submit">Confirm Booking</button>
                 </div>
 
+                <div id="bookingMessage" class="col-12 mt-3"></div>
             </div>
         </form>
 
     </div>
 </section>
 
+<!-- CANCEL BOOKING -->
+<section id="cancelBooking" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 section-title fade-in" data-i18n="cancel.title">Cancel Your Booking</h2>
+
+        <div class="glass-card p-4 shadow-lg fade-in-up">
+            <p class="text-center mb-4" data-i18n="cancel.description">
+                Enter your booking ID or email/phone number to cancel your reservation.
+            </p>
+
+            <form id="cancelBookingForm" class="row g-3">
+                <div class="col-md-12">
+                    <label class="form-label" data-i18n="cancel.reservation">Booking ID or Email/Phone</label>
+                    <input type="text" id="cancelReservation" class="form-control modern-input" 
+                           placeholder="Enter booking ID or email/phone" data-i18n-placeholder="cancel.placeholder" required>
+                    <small class="form-text text-muted" data-i18n="cancel.help">
+                        You can find your Booking ID in your confirmation email or receipt.
+                    </small>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-danger btn-lg glow-button mt-3 px-5" data-i18n="cancel.submit">
+                        Cancel Booking
+                    </button>
+                </div>
+
+                <div id="cancelMessage" class="col-12 mt-3"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

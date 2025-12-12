@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Receipt - Grand Luxe Hotel</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .receipt-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .receipt-header {
+            text-align: center;
+            border-bottom: 3px solid #0d6efd;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .receipt-body {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .receipt-section {
+            margin-bottom: 2rem;
+        }
+
+        .receipt-section h5 {
+            color: #0d6efd;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .receipt-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .receipt-row:last-child {
+            border-bottom: none;
+        }
+
+        .receipt-label {
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .receipt-value {
+            color: #212529;
+        }
+
+        .total-section {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            border: 2px solid #0d6efd;
+        }
+
+        .total-amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .print-button {
+            margin-top: 2rem;
+        }
+
+        @media print {
+            .print-button,
+            .back-button {
+                display: none;
+            }
+
+            .receipt-container {
+                margin: 0;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="admin-body">
+    <div class="container">
+        <div class="receipt-container">
+            <div class="receipt-body">
+                <!-- Receipt Header -->
+                <div class="receipt-header">
+                    <h1 class="mb-2">🏨 Grand Luxe Hotel</h1>
+                    <p class="text-muted mb-0">Booking Receipt</p>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loadingState" class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-3">Loading receipt...</p>
+                </div>
+
+                <!-- Receipt Content -->
+                <div id="receiptContent" style="display: none;">
+                    <!-- Guest Information -->
+                    <div class="receipt-section">
+                        <h5>Guest Information</h5>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Name:</span>
+                            <span class="receipt-value" id="guestName">-</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Contact:</span>
+                            <span class="receipt-value" id="guestContact">-</span>
+                        </div>
+                    </div>
+
+                    <!-- Booking Information -->
+                    <div class="receipt-section">
+                        <h5>Booking Details</h5>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Booking ID:</span>
+                            <span class="receipt-value" id="bookingId">-</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Room Number:</span>
+                            <span class="receipt-value" id="roomNumber">-</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Room Type:</span>
+                            <span class="receipt-value" id="roomType">-</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Check-in Date:</span>
+                            <span class="receipt-value" id="checkIn">-</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Check-out Date:</span>
+                            <span class="receipt-value" id="checkOut">-</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Number of Nights:</span>
+                            <span class="receipt-value" id="nights">-</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Status:</span>
+                            <span class="receipt-value">
+                                <span class="badge bg-primary" id="bookingStatus">-</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <div class="receipt-section">
+                        <h5>Payment Details</h5>
+                        <div class="receipt-row">
+                            <span class="receipt-label">Price per Night:</span>
+                            <span class="receipt-value" id="pricePerNight">-</span>
+                        </div>
+                        <div class="total-section">
+                            <div class="receipt-row">
+                                <span class="receipt-label total-amount">Total Amount Paid:</span>
+                                <span class="receipt-value total-amount" id="totalAmount">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Receipt Footer -->
+                    <div class="receipt-section text-center text-muted mt-4">
+                        <p class="mb-1">Receipt Generated: <span id="receiptDate">-</span></p>
+                        <p class="mb-0">Thank you for choosing Grand Luxe Hotel!</p>
+                    </div>
+                </div>
+
+                <!-- Error State -->
+                <div id="errorState" style="display: none;" class="alert alert-danger">
+                    <h5>Error Loading Receipt</h5>
+                    <p id="errorMessage">Unable to load receipt information.</p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="text-center mt-4">
+                    <button onclick="window.print()" class="btn btn-primary print-button me-2">
+                        🖨️ Print Receipt
+                    </button>
+                    <a href="index.html" class="btn btn-secondary back-button">
+                        ← Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Get booking ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookingId = urlParams.get('id');
+
+        if (!bookingId) {
+            document.getElementById('loadingState').style.display = 'none';
+            document.getElementById('errorState').style.display = 'block';
+            document.getElementById('errorMessage').textContent = 'No booking ID provided.';
+        } else {
+            // Fetch receipt data
+            fetch(`/api/bookings/receipt/${bookingId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        // Try to get error details
+                        return response.text().then(text => {
+                            let errorMsg = `Failed to load receipt (Status: ${response.status})`;
+                            try {
+                                const errorData = JSON.parse(text);
+                                errorMsg += ` - ${errorData.message || text}`;
+                            } catch {
+                                errorMsg += ` - ${text}`;
+                            }
+                            throw new Error(errorMsg);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Hide loading, show content
+                    document.getElementById('loadingState').style.display = 'none';
+                    document.getElementById('receiptContent').style.display = 'block';
+
+                    // Populate receipt data
+                    document.getElementById('guestName').textContent = data.guest?.name || 'N/A';
+                    document.getElementById('guestContact').textContent = data.guest?.contact || 'N/A';
+                    document.getElementById('bookingId').textContent = `#${data.bookingId}`;
+                    document.getElementById('roomNumber').textContent = data.room?.roomNumber || 'N/A';
+                    document.getElementById('roomType').textContent = data.room?.type || 'N/A';
+                    
+                    // Format dates
+                    const checkIn = new Date(data.checkIn);
+                    const checkOut = new Date(data.checkOut);
+                    document.getElementById('checkIn').textContent = checkIn.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                    document.getElementById('checkOut').textContent = checkOut.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+
+                    document.getElementById('nights').textContent = `${data.nights} ${data.nights === 1 ? 'night' : 'nights'}`;
+                    document.getElementById('pricePerNight').textContent = `$${data.pricePerNight.toFixed(2)}`;
+                    document.getElementById('totalAmount').textContent = `$${data.totalAmount.toFixed(2)}`;
+                    document.getElementById('bookingStatus').textContent = data.status || 'Confirmed';
+
+                    // Format receipt date
+                    const receiptDate = new Date(data.receiptDate);
+                    document.getElementById('receiptDate').textContent = receiptDate.toLocaleString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading receipt:', error);
+                    document.getElementById('loadingState').style.display = 'none';
+                    document.getElementById('errorState').style.display = 'block';
+                    document.getElementById('errorMessage').textContent = error.message || 'Unable to load receipt information.';
+                });
+        }
+    </script>
+</body>
+
+</html>
+

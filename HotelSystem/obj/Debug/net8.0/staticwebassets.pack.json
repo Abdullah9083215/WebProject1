@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\guest-login.html",
+      "PackagePath": "staticwebassets\\guest-login.html"
+    },
+    {
+      "Id": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\home.html",
+      "PackagePath": "staticwebassets\\home.html"
+    },
+    {
       "Id": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
@@ -253,6 +261,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\receipt.html",
+      "PackagePath": "staticwebassets\\receipt.html"
+    },
+    {
       "Id": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\script.js",
       "PackagePath": "staticwebassets\\script.js"
     },
@@ -265,8 +277,16 @@
       "PackagePath": "staticwebassets\\web project\\admin.html"
     },
     {
+      "Id": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\home.html",
+      "PackagePath": "staticwebassets\\web project\\home.html"
+    },
+    {
       "Id": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\index.html",
       "PackagePath": "staticwebassets\\web project\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\receipt.html",
+      "PackagePath": "staticwebassets\\web project\\receipt.html"
     },
     {
       "Id": "C:\\Users\\Abdullah\\Desktop\\WebProject1\\HotelSystem\\wwwroot\\web project\\script.js",

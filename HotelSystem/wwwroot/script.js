@@ -284,8 +284,8 @@ if (document.getElementById("roomsContainer")) {
                     });
                     console.log("✅ Booking created successfully:", booking);
 
-                    alert("Booking Confirmed! 🎉");
-                    e.target.reset();
+                    // Redirect to receipt page
+                    window.location.href = `receipt.html?id=${booking.id}`;
                 } catch (bookingError) {
                     console.error("❌ Booking creation failed:", bookingError);
                     
@@ -388,7 +388,7 @@ function initializeAdmin() {
         adminBookingsTable.innerHTML = '';
 
         if (bookings.length === 0) {
-            adminBookingsTable.innerHTML = '<tr><td colspan="5" class="text-center">No bookings yet.</td></tr>';
+            adminBookingsTable.innerHTML = '<tr><td colspan="6" class="text-center">No bookings yet.</td></tr>';
             return;
         }
 
@@ -403,6 +403,11 @@ function initializeAdmin() {
                     <td>${booking.checkIn ? new Date(booking.checkIn).toLocaleDateString() : 'N/A'}</td>
                     <td>${booking.checkOut ? new Date(booking.checkOut).toLocaleDateString() : 'N/A'}</td>
                     <td><span class="badge bg-primary">${booking.status || 'Confirmed'}</span></td>
+                    <td>
+                        <a href="receipt.html?id=${booking.id}" class="btn btn-sm btn-info" target="_blank">
+                            📄 View Receipt
+                        </a>
+                    </td>
                 </tr>
             `;
         });

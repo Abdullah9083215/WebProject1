@@ -19,14 +19,73 @@ namespace HotelSystem.Controllers
             _context = context;
         }
 
-        // GET: api/bookings
+        // GET: api/bookings?search=xxx&status=Confirmed
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Booking>>> GetBookings()
+        public async Task<ActionResult<IEnumerable<Booking>>> GetBookings([FromQuery] string? search, [FromQuery] string? status)
         {
-            return await _context.Bookings
+            var query = _context.Bookings
                 .Include(b => b.Room)
                 .Include(b => b.Guest)
-                .ToListAsync();
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(b => 
+                    (b.Guest != null && (b.Guest.Name.Contains(search) || b.Guest.Contact.Contains(search))) ||
+                    (b.Room != null && (b.Room.RoomNumber.Contains(search) || b.Room.Type.Contains(search)))
+                );
+            }
+
+            if (!string.IsNullOrEmpty(status))
+            {
+                query = query.Where(b => b.Status == status);
+            }
+
+            return await query.ToListAsync();
+        }
+
+        // GET: api/bookings/receipt/5
+        [HttpGet("receipt/{id}")]
+        public async Task<ActionResult<object>> GetReceipt(int id)
+        {
+            var booking = await _context.Bookings
+                .Include(b => b.Room)
+                .Include(b => b.Guest)
+                .FirstOrDefaultAsync(b => b.Id == id);
+
+            if (booking == null) return NotFound();
+
+            // Calculate number of nights
+            var nights = (booking.CheckOut - booking.CheckIn).Days;
+            if (nights <= 0) nights = 1; // Minimum 1 night
+
+            // Calculate total amount
+            var totalAmount = booking.Room?.Price * nights ?? 0;
+
+            var receipt = new
+            {
+                BookingId = booking.Id,
+                Guest = new
+                {
+                    Name = booking.Guest?.Name ?? "N/A",
+                    Contact = booking.Guest?.Contact ?? "N/A"
+                },
+                Room = new
+                {
+                    RoomNumber = booking.Room?.RoomNumber ?? "N/A",
+                    Type = booking.Room?.Type ?? "N/A",
+                    PricePerNight = booking.Room?.Price ?? 0
+                },
+                CheckIn = booking.CheckIn,
+                CheckOut = booking.CheckOut,
+                Nights = nights,
+                PricePerNight = booking.Room?.Price ?? 0,
+                TotalAmount = totalAmount,
+                Status = booking.Status,
+                ReceiptDate = DateTime.Now
+            };
+
+            return Ok(receipt);
         }
 
         // GET: api/bookings/5
@@ -117,7 +176,7 @@ namespace HotelSystem.Controllers
             if (request == null || string.IsNullOrWhiteSpace(request.Reservation))
                 return BadRequest("Reservation identifier is required.");
 
-            Booking booking = null;
+            Booking? booking = null;
 
             // Try by Reservation ID (number)
             if (int.TryParse(request.Reservation, out int bookingId))
@@ -126,12 +185,12 @@ namespace HotelSystem.Controllers
                     .FirstOrDefaultAsync(b => b.Id == bookingId);
             }
 
-            // Try by phone number
+            // Try by email or phone number (contact field)
             if (booking == null)
             {
                 booking = await _context.Bookings
                     .Include(b => b.Guest)
-                    .Where(b => b.Guest.Contact == request.Reservation)
+                    .Where(b => b.Guest != null && b.Guest.Contact == request.Reservation)
                     .OrderByDescending(b => b.Id)
                     .FirstOrDefaultAsync();
             }
@@ -151,7 +210,7 @@ namespace HotelSystem.Controllers
         // DTO class for the request
         public class CancelRequest
         {
-            public string Reservation { get; set; }
+            public required string Reservation { get; set; }
         }
 
     }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using HotelSystem.Data;
 using HotelSystem.Models;
@@ -18,11 +19,18 @@ namespace HotelSystem.Controllers
             _context = context;
         }
 
-        // GET: api/guests
+        // GET: api/guests?search=xxx
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Guest>>> GetGuests()
+        public async Task<ActionResult<IEnumerable<Guest>>> GetGuests([FromQuery] string? search)
         {
-            return await _context.Guests.ToListAsync();
+            var query = _context.Guests.AsQueryable();
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(g => g.Name.Contains(search) || g.Contact.Contains(search));
+            }
+
+            return await query.ToListAsync();
         }
 
         // GET: api/guests/5
